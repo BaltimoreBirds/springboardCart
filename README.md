@@ -1,11 +1,12 @@
 # springboardCart  
 Shopping Cart plugin for Springboard  
 
-Initialize Cart:  
+Initialize Cart(Options optional):  
 
-sbCart.shop( [ {options} ] )
+sbCart.shop( {options} )
 
-`sbCart.shop({  
+```
+sbCart.shop({  
 		bgColor: 'teal'  
-	});`  
-	
+	});
+```	
