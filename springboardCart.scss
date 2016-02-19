@@ -1,0 +1,61 @@
+// Don't edit the .css file. Edit springboardCart.scss!!
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+#springboardCartWrap{
+
+	width: 100%;
+
+	.cartRow{
+		position: relative;
+		max-width: 70rem;
+		display: block;
+		margin: 0 auto;
+	}
+	.cartRow:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	//lol grid
+	.cartRow .span1{width: 10%; display: inline-block; float: left; display: relative;}
+	.cartRow .span2{width: 20%; display: inline-block; float: left; display: relative;}
+	.cartRow .span3{width: 30%; display: inline-block; float: left; display: relative;}
+	.cartRow .span4{width: 40%; display: inline-block; float: left; display: relative;}
+	.cartRow .span5{width: 50%; display: inline-block; float: left; display: relative;}
+	.cartRow .span6{width: 60%; display: inline-block; float: left; display: relative;}
+	.cartRow .span7{width: 70%; display: inline-block; float: left; display: relative;}
+	.cartRow .span8{width: 80%; display: inline-block; float: left; display: relative;}
+	.cartRow .span9{width: 90%; display: inline-block; float: left; display: relative;}
+	.cartRow .span10{width: 100%; display: inline-block; float: left; display: relative;}
+
+	.bar{
+		margin: 0;
+	}
+	#cartDropdown{
+		float: right;
+		text-align: right;
+	}
+
+
+}
+#springboardCartWrap.affixed{
+		position: fixed;
+		top:0;
+		z-index: 9999;
+}
+
+@media only screen and (max-width: 430px){
+	#springboardCartWrap{
+		.cartRow [class^="span"]{
+			width: 100%;
+		}
+	}	
+}
