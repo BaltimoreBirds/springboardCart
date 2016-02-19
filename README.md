@@ -5,6 +5,7 @@ Initialize Cart:
 
 sbCart.shop( [ {options} ] )
 
-'sbCart.shop({
-		bgColor: 'teal'
-	});''
+`sbCart.shop({  
+		bgColor: 'teal'  
+	});`  
+	
