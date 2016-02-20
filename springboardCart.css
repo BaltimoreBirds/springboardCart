@@ -94,6 +94,11 @@ body {
     text-align: left; }
   #springboardCartWrap .borderBottom {
     border-bottom: 1px solid #9E9E9E; }
+  #springboardCartWrap .itemCount {
+    position: relative;
+    right: -2.5%;
+    top: -11px;
+    font-size: 10px; }
   @media (max-width: 550px) {
     #springboardCartWrap .cartRow .span1 {
       width: 100%;

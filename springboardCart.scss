@@ -72,7 +72,12 @@ body {
 	.borderBottom{
 		border-bottom: 1px solid #9E9E9E;
 	}
-	
+	.itemCount{
+		position: relative;
+		right:-2.5%;
+		top: -11px;
+		font-size: 10px;
+	}
 	@media (max-width: 550px){
 		.cartRow .span1{width: 100%; display: block; float: left;}
 		.cartRow .span2{width: 100%; display: block; float: left;}

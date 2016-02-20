@@ -36,7 +36,9 @@
 ehthumbs.db
 Thumbs.db
 
-# Local demo/testing files #
+# Local demo/testing files & sass#
 ############################
-/demo/*
-/demo
+#/demo/*
+#/demo
+.sass-cache
+.sass-cache/*

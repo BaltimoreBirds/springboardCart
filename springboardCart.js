@@ -13,7 +13,6 @@
 
 	//Private Vars
 	var products = {},
-			// validProducts = [], 
 			currentPrice = 0,
 			cartWrap,
 			error = {
@@ -22,6 +21,7 @@
 			defaults = {
 				sessionName: null,
 				usingDefaultCart: false,
+				brandName: '',
 				minHeight: 30,
 				bgColor: '#9d1b31',
 				txtColor: 'white',
@@ -32,6 +32,7 @@
 
 	//Private functions
 	var _updateCartView = function(){
+		var quantityTotal = 0;
 		
 		//Clear cart innerWrap html
 		$('#productDisplay .innerWrap')[0].innerHTML = " ";
@@ -42,12 +43,23 @@
 					price = products[key].price,
 					quant = products[key].quantity;
 
+			quantityTotal += quant;
 			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="noStretch span5">'+productName+'</div><div class="noStretch span2">Qty. '+quant+'</div><div class="noStretch span3 txtRight">$'+parseFloat(quant*price).toFixed(2)+'</div></div>');
 		});
+
+		//Update Cart quantity
+		$('.itemCount').text(quantityTotal);
 
 		//Build a 'total' row
 		var total = _total();
 		$('#productDisplay .innerWrap').append('<div class="cartRow"><div class="noStretch span7">Total: </div><div class="noStretch span3 txtRight">$'+total+'</div></div>');
+	};
+
+	var _quantTotal = function(){
+		var quantTotal = 0;
+		Object.keys(products).forEach(function(key){
+			quantTotal += products[key].quantity;
+		});
 	};
 
 	//return total price
@@ -127,7 +139,7 @@
 			if(defaults.usingDefaultCart && !$('#springboardCartWrap').length ){
 
 				//Affix shopping Cart bar. HTML in cart.html
-				$('body').prepend('<div id="springboardCartWrap" class="affixed"><div class="bar borderBottom"><div class="cartRow"><div id="logoBlock" class="noStretch span5"><p><img  src="'+defaults.brandLogo+'"/> Swan & Son</p></div><a class="clickable" href="#"><div id="cartDropdown" class="noStretch span5 txtRight"><p><img class="iconWidth" src="'+defaults.cartImgUrl+'"/> <span>Shopping Cart <span class="arrowIcon">&#9660;</span></span></p></div></a> </div></div><div id="productDisplay" class="cartRow"><div class="innerWrap span4"></div></div></div>');
+				$('body').prepend('<div id="springboardCartWrap" class="affixed"><div class="bar borderBottom"><div class="cartRow"><div id="logoBlock" class="noStretch span5"><p><img src="'+defaults.brandLogo+'"/> '+defaults.brandName+'</p></div><a class="clickable" href="#"><div id="cartDropdown" class="noStretch span5 txtRight"><p><span class="itemCount"></span><img class="iconWidth" src="'+defaults.cartImgUrl+'"/> <span>Shopping Cart <span class="arrowIcon">&#9660;</span></span></p></div></a> </div></div><div id="productDisplay" class="cartRow"><div class="innerWrap span4"></div></div></div>');
 
 				//Style it
 				//$('#springboardCartWrap #productDisplay').hide();
@@ -146,26 +158,28 @@
 				_updateCartView();
 			}
 		},
-
 		//Add a product to the Cart
-		add: function(productName, quant, productPrice, callback){
+		add: function(productId, productName, quant, productPrice, callback){
+			//Should we be adding tlc_source/appealID etc. info on the product object?
+			//Or maybe it should exist on the springboard Ticket.
 
 			//Validate the function arguments
-			if(typeof productName !== 'string' || typeof quant !== 'number' || typeof productPrice !== 'number'){
+			if(typeof productId !== 'string' || typeof productName !== 'string' || typeof quant !== 'number' || typeof productPrice !== 'number'){
+				
 				throw new Error('Improper function arguments -> SbCart.add(\'string\',\'number\',\'number\')');
 			}
 
 			//If product is in cart
-			if(productName in products){
+			if(productId in products){
 				//increase quantity
-				products[productName].quantity += quant;
+				products[productId].quantity += quant;
 
 			}else{
 				//Add to products
-				products[productName] = {};
-				products[productName].product = productName;
-				products[productName].quantity = quant;
-				products[productName].price = productPrice;
+				products[productId] = {};
+				products[productId].product = productName;
+				products[productId].quantity = quant;
+				products[productId].price = productPrice;
 			}
 
 			if(defaults.usingDefaultCart){
@@ -181,20 +195,19 @@
 			}
 
 		},
-
-		remove: function(productName, quant, callback){
+		remove: function(productId, quant, callback){
 			
 			//Validate function arguments
-			if(typeof productName !== "string" || typeof quant !== "number"){
+			if(typeof productId !== "string" || typeof quant !== "number"){
 				throw new Error("Improper Function Arguments -> SbCart.remove(productName, quantity)");
 			}
 
-			if(productName in products){
+			if(productId in products){
 				
-				if(products[productName].quantity - quant <= 0 ){
-					delete products[productName];
+				if(products[productId].quantity - quant <= 0 ){
+					delete products[productId];
 				}else{
-					products[productName].quantity -= quant;
+					products[productId].quantity -= quant;
 				}
 				//Update the default view if we're using it
 				if(defaults.usingDefaultCart){
@@ -211,20 +224,19 @@
 			}
 
 		},
-
 		total: function(){
 			return _total();
 		},
-
 		products: function(){
 			return _products();
 		},
-
+		quanTotal: function(){
+			return _quantTotal();
+		},
 		cartToggle: function(){
 			if(defaults.usingDefaultCart){
 				_cartToggle();
 			}
 		}
-
 	};
 })(jQuery);
