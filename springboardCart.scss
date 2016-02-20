@@ -73,7 +73,7 @@ body {
 		border-bottom: 1px solid #9E9E9E;
 	}
 	
-	@media (max-width: 430px){
+	@media (max-width: 550px){
 		.cartRow .span1{width: 100%; display: block; float: left;}
 		.cartRow .span2{width: 100%; display: block; float: left;}
 		.cartRow .span3{width: 100%; display: block; float: left;}
@@ -84,5 +84,16 @@ body {
 		.cartRow .span8{width: 100%; display: block; float: left;}
 		.cartRow .span9{width: 100%; display: block; float: left;}
 		.cartRow .span10{width: 100%; display: block; float: left;}
+		.cartRow .noStretch.span1{width: 10%; display: inline-block; float: left;}
+		.cartRow .noStretch.span2{width: 20%; display: inline-block; float: left;}
+		.cartRow .noStretch.span3{width: 30%; display: inline-block; float: left;}
+		.cartRow .noStretch.span4{width: 40%; display: inline-block; float: left;}
+		.cartRow .noStretch.span5{width: 50%; display: inline-block; float: left;}
+		.cartRow .noStretch.span6{width: 60%; display: inline-block; float: left;}
+		.cartRow .noStretch.span7{width: 70%; display: inline-block; float: left;}
+		.cartRow .noStretch.span8{width: 80%; display: inline-block; float: left;}
+		.cartRow .noStretch.span9{width: 90%; display: inline-block; float: left;}
+		.cartRow .noStretch.span10{width: 100%; display: inline-block; float: left;}		
+
 	}
 }
