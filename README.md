@@ -1,7 +1,7 @@
 # springboardCart  
 Shopping Cart plugin for Springboard  
 
-Initialize Cart(Options optional). Dev's option to use the default cart.
+Initialize Cart: SbCart.shop({options}); Dev's option to use the default cart.
 ```
 	SbCart.shop({
 		usingDefaultCart: true,
