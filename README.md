@@ -16,7 +16,7 @@ Initialize Cart: SbCart.shop({options}); Dev's option to use the default cart.
 	});
 ```
 
-Add Products: SbCart.add(productName, quantity, price [,callback]);
+Add Products: SbCart.add(productId, productName, quantity, price [,callback]);
 ```
 	SbCart.add('AIC_member_plus_83.68','Member Plus', 1, 83.68);
 ```
