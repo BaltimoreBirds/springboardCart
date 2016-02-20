@@ -21,12 +21,12 @@
 			defaults = {
 				sessionName: null,
 				usingDefaultCart: false,
-				brandName: '',
+				brandName: 'Swan & Son',
 				minHeight: 30,
-				bgColor: '#9d1b31',
-				txtColor: 'white',
-				secondaryColor: '#d8d8d8',
-				brandLogo: 'https://artic.gospringboard.com/files/artic/swan_crop2.png',
+				bgColor: '#d8d8d8',
+				txtColor: 'black',
+				secondaryColor: '#ffffff',
+				brandLogo: 'https://artic.gospringboard.com/files/artic/transparent.png',
 				cartImgUrl: 'https://artic.gospringboard.com/files/artic/empty-cart-light-small.png',
 			};
 
@@ -146,7 +146,7 @@
 				$('#springboardCartWrap .bar, #springboardCartWrap .clickable').css('color', defaults.txtColor);
 				$('#springboardCartWrap .bar').css('background-color', defaults.bgColor);
 				$('#springboardCartWrap .bar').css('min-height', defaults.minHeight);
-				$('#springboardCartWrap .innerWrap').css('background-color',defaults.secondaryColor);
+				$('#springboardCartWrap .innerWrap').css('background-color', defaults.secondaryColor);
 				$('#springboardCartWrap .innerWrap').css('border','15px solid '+defaults.bgColor);
 
 				//Create handler for cart down click
