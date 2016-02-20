@@ -15,6 +15,7 @@
 	var products = {},
 			currentPrice = 0,
 			cartWrap,
+			checkedOut = false,
 			error = {
 				message: " ",
 			},
@@ -169,6 +170,7 @@
 				throw new Error('Improper function arguments -> SbCart.add(\'string\',\'number\',\'number\')');
 			}
 
+			productId = productId.toLowerCase();
 			//If product is in cart
 			if(productId in products){
 				//increase quantity
@@ -202,6 +204,7 @@
 				throw new Error("Improper Function Arguments -> SbCart.remove(productName, quantity)");
 			}
 
+			productId = productId.toLowerCase();
 			if(productId in products){
 				
 				if(products[productId].quantity - quant <= 0 ){
@@ -223,6 +226,23 @@
 				callback(products);
 			}
 
+		},
+		checkout: function(){
+			if( !$('.ticket_box').length ){
+				throw new Error('Not on the checkout page! -> https://artic.gospringboard.com/secure/checkout');
+			}
+			
+			var products = _products();
+			var $product_selects = $('td.ticket_descriptions');
+
+			//Cycle through options on the springboard checkout ticketing..thing
+			$.each($product_selects, function(i, e){
+				//Check if product is in cart
+				if( products.indexOf($(this).text()) >= 0){
+					console.log('it\'s here');
+					$(this).prev().find('select.form-select').val(products[ $(this).text() ].quantity);
+				}
+			});
 		},
 		total: function(){
 			return _total();
