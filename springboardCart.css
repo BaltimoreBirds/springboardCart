@@ -6,6 +6,11 @@
 body {
   margin: 0; }
 
+#springboardCartWrap.affixed {
+  position: fixed;
+  top: 0;
+  z-index: 9999; }
+
 #springboardCartWrap {
   width: 100%; }
   #springboardCartWrap .cartRow {
@@ -69,17 +74,66 @@ body {
     display: relative; }
   #springboardCartWrap .bar {
     margin: 0; }
+  #springboardCartWrap p {
+    margin: .5em 0 .5em 0; }
+  #springboardCartWrap a, #springboardCartWrap a:visted, #springboardCartWrap a:hover {
+    color: white; }
   #springboardCartWrap #cartDropdown {
-    float: right;
+    float: right; }
+  #springboardCartWrap .arrowIcon {
+    size: 12px; }
+  #springboardCartWrap .iconWidth {
+    max-width: 30px; }
+  #springboardCartWrap #productDisplay .innerWrap {
+    float: right; }
+  #springboardCartWrap .innerWrap .cartRow {
+    padding: 5px; }
+  #springboardCartWrap .txtRight {
     text-align: right; }
-
-#springboardCartWrap.affixed {
-  position: fixed;
-  top: 0;
-  z-index: 9999; }
-
-@media only screen and (max-width: 430px) {
-  #springboardCartWrap .cartRow [class^="span"] {
-    width: 100%; } }
+  #springboardCartWrap .txtLeft {
+    text-align: left; }
+  #springboardCartWrap .borderBottom {
+    border-bottom: 1px solid #9E9E9E; }
+  @media (max-width: 430px) {
+    #springboardCartWrap .cartRow .span1 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span2 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span3 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span4 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span5 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span6 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span7 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span8 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span9 {
+      width: 100%;
+      display: block;
+      float: left; }
+    #springboardCartWrap .cartRow .span10 {
+      width: 100%;
+      display: block;
+      float: left; } }
 
 /*# sourceMappingURL=springboardCart.css.map */

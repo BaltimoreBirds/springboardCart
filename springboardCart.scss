@@ -8,9 +8,12 @@
 body {
 	margin: 0;
 }
-
+#springboardCartWrap.affixed{
+		position: fixed;
+		top:0;
+		z-index: 9999;
+}
 #springboardCartWrap{
-
 	width: 100%;
 
 	.cartRow{
@@ -39,23 +42,47 @@ body {
 	.bar{
 		margin: 0;
 	}
+	p{
+		margin: .5em 0 .5em 0;
+	}
+	a, a:visted, a:hover{
+		color: white;
+	}
 	#cartDropdown{
 		float: right;
+	}
+	.arrowIcon{
+		size: 12px;
+	}
+	.iconWidth{
+		max-width: 30px;
+	}
+	#productDisplay .innerWrap{
+		float:right;
+	}
+	.innerWrap .cartRow{
+		padding: 5px;
+	}
+	.txtRight{
 		text-align: right;
 	}
-
-
-}
-#springboardCartWrap.affixed{
-		position: fixed;
-		top:0;
-		z-index: 9999;
-}
-
-@media only screen and (max-width: 430px){
-	#springboardCartWrap{
-		.cartRow [class^="span"]{
-			width: 100%;
-		}
+	.txtLeft{
+		text-align: left;
 	}	
+	.borderBottom{
+		border-bottom: 1px solid #9E9E9E;
+	}
+	
+	@media (max-width: 430px){
+		.cartRow .span1{width: 100%; display: block; float: left;}
+		.cartRow .span2{width: 100%; display: block; float: left;}
+		.cartRow .span3{width: 100%; display: block; float: left;}
+		.cartRow .span4{width: 100%; display: block; float: left;}
+		.cartRow .span5{width: 100%; display: block; float: left;}
+		.cartRow .span6{width: 100%; display: block; float: left;}
+		.cartRow .span7{width: 100%; display: block; float: left;}
+		.cartRow .span8{width: 100%; display: block; float: left;}
+		.cartRow .span9{width: 100%; display: block; float: left;}
+		.cartRow .span10{width: 100%; display: block; float: left;}
+	}
 }
