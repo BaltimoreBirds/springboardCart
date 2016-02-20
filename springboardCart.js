@@ -41,11 +41,11 @@
 					price = products[key].price,
 					quant = products[key].quantity;
 
-			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="span5">'+productName+'</div><div class="span2">Qty. '+quant+'</div><div class="span3 txtRight">$'+quant*price+'</div></div>');
+			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="span5">'+productName+'</div><div class="span2">Qty. '+quant+'</div><div class="span3 txtRight">$'+parseFloat(quant*price).toFixed(2)+'</div></div>');
 		});
 
 		//Build a 'total' row
-		var total = _total().toString();
+		var total = _total();
 		$('#productDisplay .innerWrap').append('<div class="cartRow"><div class="span7">Total: </div><div class="span3 txtRight">$'+total+'</div></div>');
 	};
 
@@ -55,7 +55,7 @@
 		Object.keys(products).forEach(function(key){
 			total += (products[key].quantity * products[key].price);
 		});
-		return total;
+		return parseFloat(total).toFixed(2);
 	};		
 
 	//return products in cart
@@ -76,7 +76,16 @@
 
 	//Output help
 	var _debug = function(){
-		console.log("Defaults", defaults)
+		console.log("Defaults", defaults);
+	}
+
+	var _isFunction = function(func){
+		//return callback if callback is kosher
+		if(typeof func === "function"){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	//Public API 
@@ -120,7 +129,7 @@
 		},
 
 		//Add a product to the Cart
-		add: function(productName, quant, productPrice){
+		add: function(productName, quant, productPrice, callback){
 
 			//Check it's a valid product name, return error if it isn't
 			//if( validProducts.indexOf(productName) < 0 ){
@@ -144,6 +153,10 @@
 				_updateCartView();
 			}
 
+			//return callback if callback is kosher
+			if( _isFunction(callback) ){
+				callback(products);
+			}
 		},
 
 		remove: function(productName, quant, callback){
@@ -162,7 +175,7 @@
 			}			
 
 			//return callback if callback is kosher
-			if(typeof callback === "function"){
+			if( _isFunction(callback) ){
 				callback(products);
 			}
 
