@@ -16,5 +16,8 @@ Add Products: SbCart.add(productName, quantity, price [,callback]);
 ```
 Remove Products: SbCart.remove(productName, quantity [,callback]);
 ```
-	SbCart.remove('Member Plus', 1 /* ,[callback] */);
+	SbCart.remove('Member Plus', 1, function(data){
+		//returns products
+		//do something with data
+	});
 ```	
