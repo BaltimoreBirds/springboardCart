@@ -6,8 +6,9 @@ Add this module definition to all pages utilizing the shopping cart. Use the SbC
 Initialize Cart: SbCart.shop({options}); Dev's option to use the default cart.
 ```
 	SbCart.shop({
-		usingDefaultCart: true,
-		bgColor: 'teal', 
+		sessionName: 'testSession',
+    usingDefaultCart: true,
+    brandName: 'Swan & Son',
 	});
 ```
 
