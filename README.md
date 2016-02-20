@@ -7,8 +7,8 @@ Initialize Cart: SbCart.shop({options}); Dev's option to use the default cart.
 ```
 	SbCart.shop({
 		sessionName: 'testSession',
-    usingDefaultCart: true,
-    brandName: 'Swan & Son',
+    		usingDefaultCart: true,
+		brandName: 'Swan & Son',
 	});
 ```
 
