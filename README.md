@@ -6,25 +6,25 @@ Add this module definition to all pages utilizing the shopping cart. Use the SbC
 **Arguments in brackets are optional*
 
 Initialize Cart: SbCart.shop({options}); Dev's option to use the default cart.
-```
+```javascript
 	SbCart.shop({
 		sessionName: 'testSession',
 		usingDefaultCart: true,
-    		brandName: 'Swan & Son',
-    		txtColor: '#ffffff',
-    		brandLogo: 'https://artic.gospringboard.com/files/artic/swan_crop2.png',
-    		bgColor: '#0A004D',
-    		secondaryColor: '#d8d8d8',
+		brandName: 'Swan & Son',
+		txtColor: '#ffffff',
+		brandLogo: 'https://artic.gospringboard.com/files/artic/swan_crop2.png',
+		bgColor: '#0A004D',
+		secondaryColor: '#d8d8d8',
 	});
 ```
 
 Add Products: SbCart.add(productId, productName, quantity, price [,callback]);
-```
+```javascript
 	SbCart.add('AIC_member_plus_83.68','Member Plus', 1, 83.68);
 ```
 
 Remove Products: SbCart.remove(productId, productName, quantity [,callback]);
-```
+```javascript
 	SbCart.remove('AIC_member_plus_83.68', 1, function(data){
 		//returns products
 		//do something with data
@@ -32,7 +32,7 @@ Remove Products: SbCart.remove(productId, productName, quantity [,callback]);
 ```	
 
 Checkout: SbCart.checkout([callback]);
-```
+```javascript
 	SbCart.checkout(function(data){
 		//returns products
 		//do something with data
@@ -40,17 +40,17 @@ Checkout: SbCart.checkout([callback]);
 ```	
 
 Return Total:
-```
+```javascript
 	SbCart.total();
 ```	
 
 Return Products:
-```
+```javascript
 	SbCart.products();
 ```	
 
 Return Quantity of items in Cart:
-```
+```javascript
 	SbCart.quantTotal();
 ```	
 
