@@ -6,7 +6,7 @@ Add this module definition to all pages utilizing the shopping cart. Use the SbC
 **Arguments in brackets are optional*
 
 Initialize Cart: SbCart.shop({options});  
-Dev's option to use the default cart, but you'll have to set and reuse the sessionName on Every initilization, aka, on every page in which you hope to use the cart.
+Dev's option to use the default cart, but you'll have to set and reuse the sessionName on every initilization, aka, on every page in which you hope to use the cart.
 ```javascript
 	SbCart.shop({
 		sessionName: 'testSession',
