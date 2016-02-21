@@ -45,7 +45,7 @@
 					quant = products[key].quantity;
 
 			quantityTotal += quant;
-			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="noStretch span5">'+productName+'</div><div class="noStretch span2">Qty. '+quant+'</div><div class="noStretch span3 txtRight">$'+parseFloat(quant*price).toFixed(2)+'</div></div>');
+			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="noStretch spans5">'+productName+'</div><div class="noStretch spans2">Qty. '+quant+'</div><div class="noStretch spans3 txtRight">$'+parseFloat(quant*price).toFixed(2)+'</div></div>');
 		});
 
 		//Update Cart quantity
@@ -53,7 +53,7 @@
 
 		//Build a 'total' row
 		var total = _total();
-		$('#productDisplay .innerWrap').append('<div class="cartRow"><div class="noStretch span7">Total: </div><div class="noStretch span3 txtRight">$'+total+'</div></div>');
+		$('#productDisplay .innerWrap').append('<div class="cartRow"><div class="noStretch spans7">Total: </div><div class="noStretch spans3 txtRight">$'+total+'</div></div>');
 	};
 
 	var _quantTotal = function(){
@@ -140,7 +140,7 @@
 			if(defaults.usingDefaultCart && !$('#springboardCartWrap').length ){
 
 				//Affix shopping Cart bar. HTML in cart.html
-				$('body').prepend('<div id="springboardCartWrap" class="affixed"><div class="bar borderBottom"><div class="cartRow"><div id="logoBlock" class="noStretch span5"><p><img src="'+defaults.brandLogo+'"/> '+defaults.brandName+'</p></div><a class="clickable" href="#"><div id="cartDropdown" class="noStretch span5 txtRight"><p><span class="itemCount"></span><img class="iconWidth" src="'+defaults.cartImgUrl+'"/> <span>Shopping Cart <span class="arrowIcon">&#9660;</span></span></p></div></a> </div></div><div id="productDisplay" class="cartRow"><div class="innerWrap span4"></div></div></div>');
+				$('body').prepend('<div id="springboardCartWrap" class="affixed"><div class="bar borderBottom"><div class="cartRow"><div id="logoBlock" class="noStretch spans5"><p><img src="'+defaults.brandLogo+'"/> '+defaults.brandName+'</p></div><a class="clickable" href="#"><div id="cartDropdown" class="noStretch spans5 txtRight"><p><span class="itemCount"></span><img class="iconWidth" src="'+defaults.cartImgUrl+'"/> <span>Shopping Cart <span class="arrowIcon">&#9660;</span></span></p></div></a> </div></div><div id="productDisplay" class="cartRow"><div class="innerWrap spans4"></div></div></div>');
 
 				//Style it
 				//$('#springboardCartWrap #productDisplay').hide();
@@ -228,20 +228,24 @@
 
 		},
 		checkout: function(){
+			
 			if( !$('.ticket_box').length ){
 				throw new Error('Not on the checkout page! -> https://artic.gospringboard.com/secure/checkout');
 			}
-			
-			var products = _products();
-			var $product_selects = $('td.ticket_descriptions');
+			var productArray = _products();
+			var $product_selects = $('td.ticket_description');
 
 			//Cycle through options on the springboard checkout ticketing..thing
 			$.each($product_selects, function(i, e){
-				//Check if product is in cart
-				if( products.indexOf($(this).text()) >= 0){
-					console.log('it\'s here');
-					$(this).prev().find('select.form-select').val(products[ $(this).text() ].quantity);
+				var id = $(this).text();
+			
+				//Check if product is in cart				
+				if( productArray.indexOf(id) >= 0){
+					var quantSelect = $(this).prev().find('select.form-select');
+					quantSelect.val(products[id].quantity);
+					quantSelect.change();
 				}
+			
 			});
 		},
 		total: function(){

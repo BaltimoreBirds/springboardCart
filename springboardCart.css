@@ -22,52 +22,52 @@ body {
     content: "";
     display: table;
     clear: both; }
-  #springboardCartWrap .cartRow .span1 {
+  #springboardCartWrap .cartRow .spans1 {
     width: 10%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span2 {
+  #springboardCartWrap .cartRow .spans2 {
     width: 20%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span3 {
+  #springboardCartWrap .cartRow .spans3 {
     width: 30%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span4 {
+  #springboardCartWrap .cartRow .spans4 {
     width: 40%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span5 {
+  #springboardCartWrap .cartRow .spans5 {
     width: 50%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span6 {
+  #springboardCartWrap .cartRow .spans6 {
     width: 60%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span7 {
+  #springboardCartWrap .cartRow .spans7 {
     width: 70%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span8 {
+  #springboardCartWrap .cartRow .spans8 {
     width: 80%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span9 {
+  #springboardCartWrap .cartRow .spans9 {
     width: 90%;
     display: inline-block;
     float: left;
     display: relative; }
-  #springboardCartWrap .cartRow .span10 {
+  #springboardCartWrap .cartRow .spans10 {
     width: 100%;
     display: inline-block;
     float: left;
@@ -100,83 +100,83 @@ body {
     top: -11px;
     font-size: 10px; }
   @media (max-width: 550px) {
-    #springboardCartWrap .cartRow .span1 {
+    #springboardCartWrap .cartRow .spans1 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span2 {
+    #springboardCartWrap .cartRow .spans2 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span3 {
+    #springboardCartWrap .cartRow .spans3 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span4 {
+    #springboardCartWrap .cartRow .spans4 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span5 {
+    #springboardCartWrap .cartRow .spans5 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span6 {
+    #springboardCartWrap .cartRow .spans6 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span7 {
+    #springboardCartWrap .cartRow .spans7 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span8 {
+    #springboardCartWrap .cartRow .spans8 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span9 {
+    #springboardCartWrap .cartRow .spans9 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .span10 {
+    #springboardCartWrap .cartRow .spans10 {
       width: 100%;
       display: block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span1 {
+    #springboardCartWrap .cartRow .noStretch.spans1 {
       width: 10%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span2 {
+    #springboardCartWrap .cartRow .noStretch.spans2 {
       width: 20%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span3 {
+    #springboardCartWrap .cartRow .noStretch.spans3 {
       width: 30%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span4 {
+    #springboardCartWrap .cartRow .noStretch.spans4 {
       width: 40%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span5 {
+    #springboardCartWrap .cartRow .noStretch.spans5 {
       width: 50%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span6 {
+    #springboardCartWrap .cartRow .noStretch.spans6 {
       width: 60%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span7 {
+    #springboardCartWrap .cartRow .noStretch.spans7 {
       width: 70%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span8 {
+    #springboardCartWrap .cartRow .noStretch.spans8 {
       width: 80%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span9 {
+    #springboardCartWrap .cartRow .noStretch.spans9 {
       width: 90%;
       display: inline-block;
       float: left; }
-    #springboardCartWrap .cartRow .noStretch.span10 {
+    #springboardCartWrap .cartRow .noStretch.spans10 {
       width: 100%;
       display: inline-block;
       float: left; } }
