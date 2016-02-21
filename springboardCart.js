@@ -167,7 +167,7 @@
 			//Validate the function arguments
 			if(typeof productId !== 'string' || typeof productName !== 'string' || typeof quant !== 'number' || typeof productPrice !== 'number'){
 				
-				throw new Error('Improper function arguments -> SbCart.add(\'string\',\'number\',\'number\')');
+				throw new Error('Improper function arguments -> SbCart.add(\'string\',\'string\',\'number\',\'number\')');
 			}
 
 			productId = productId.toLowerCase();
@@ -227,7 +227,7 @@
 			}
 
 		},
-		checkout: function(){
+		checkout: function(callback){
 			
 			if( !$('.ticket_box').length ){
 				throw new Error('Not on the checkout page! -> https://artic.gospringboard.com/secure/checkout');
@@ -247,6 +247,10 @@
 				}
 			
 			});
+
+			if( _isFunction(callback) ){
+				callback(products);
+			}
 		},
 		total: function(){
 			return _total();
@@ -254,7 +258,7 @@
 		products: function(){
 			return _products();
 		},
-		quanTotal: function(){
+		quantTotal: function(){
 			return _quantTotal();
 		},
 		cartToggle: function(){

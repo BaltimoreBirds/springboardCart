@@ -1,0 +1,62 @@
+@import url("/sites/all/themes/springboard_themes/springboard_base/css/bootstrap.css");
+@import url("/sites/all/themes/springboard_themes/springboard_base/css/bootstrap-responsive.css");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic");
+body {
+  max-width: 100%; }
+
+.region-content {
+  max-width: 940px;
+  margin: 0 auto; }
+
+input, select {
+  height: 30px !important;
+  width: 100%;
+  margin-bottom: 0 !important; }
+
+.webform-component-fieldset {
+  padding: 20px;
+  background-color: #e5e5e5; }
+
+.alignLeft {
+  text-align: left; }
+
+.alignRight {
+  text-align: right; }
+
+.floatLeft {
+  float: left; }
+
+.floatRight {
+  float: right; }
+
+legend {
+  position: relative !important;
+  top: 39px !important;
+  margin-bottom: 25px !important; }
+
+legend.positionReset {
+  top: 0px !important;
+  margin-bottom: 10px !important; }
+
+span.fieldset-legend {
+  font-family: "Josefin Sans",Arial,sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  font-style: normal;
+  color: #9D1B32; }
+
+.summaryRow {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 10px 0; }
+
+.form_img img {
+  max-width: 100%;
+  height: auto; }
+
+.input-large, .input-small, .input-medium {
+  width: 100%; }
+
+#webform-component-billing-information--payment-fields {
+  padding: 0 !important; }
+
+/*# sourceMappingURL=sbCheckoutWrapper.css.map */
