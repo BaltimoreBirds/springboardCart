@@ -1,7 +1,7 @@
 # Springboard Shopping Cart  
 Shopping Cart module for Springboard
 
-Add this module definition to all pages utilizing the shopping cart. Use the SbCart API methods in your regular page wrapper scripts to Initialize, Add, Remove, Checkout, etc. with the SbCart module:   
+Include this module definition on all pages utilizing the shopping cart. Include the springboardCart.css above your custom styles, and include the springboardCart.js file above your custom scripts. Utilize the SbCart API methods to Initialize, Add, Remove, Checkout, etc., in your custom scripts:   
 
 **Arguments in brackets are [optional]*
 
