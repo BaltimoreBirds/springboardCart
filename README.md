@@ -9,7 +9,7 @@ Initialize Cart: SbCart.shop({options});
 Dev's option to use the default cart, but you'll have to set and reuse the sessionName on every initilization, aka, on every page in which you hope to use the cart.
 ```javascript
 	SbCart.shop({
-		sessionName: 'testSession',
+		sessionName: 'testSession', //A session name is required
 		usingDefaultCart: true,
 		brandName: 'Swan & Son',
 		txtColor: '#ffffff',
