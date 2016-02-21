@@ -3,7 +3,7 @@ Shopping Cart module for Springboard
 
 Add this module definition to all pages utilizing the shopping cart. Use the SbCart API methods in your regular page wrapper scripts to Initialize, Add, Remove, Checkout, etc. with the SbCart module:   
 
-**Arguments in brackets are optional*
+**Arguments in brackets are [optional]*
 
 Initialize Cart: SbCart.shop({options});  
 Dev's option to use the default cart, but you'll have to set and reuse the sessionName on every initilization, aka, on every page in which you hope to use the cart.
