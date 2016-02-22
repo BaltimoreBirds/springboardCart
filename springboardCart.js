@@ -41,21 +41,30 @@
 		//iterate through products, and display them
 		Object.keys(products).forEach(function(key){
 			var productName = products[key].product,
+					productId = key,
 					price = products[key].price,
 					quant = products[key].quantity;
 
 			quantityTotal += quant;
-			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="noStretch spans5">'+productName+'</div><div class="noStretch spans2">Qty. '+quant+'</div><div class="noStretch spans3 txtRight">$'+parseFloat(quant*price).toFixed(2)+'</div></div>');
+			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="noStretch spans5">'+productName+'</div><div class="noStretch spans2"><span class="productId" style="display: none;">'+productId+'</span><img class="removeButton" src="https://artic.gospringboard.com/files/artic/xOut_crop_0.png"/> Qty. '+quant+'</div><div class="noStretch spans3 txtRight">$'+parseFloat(quant*price).toFixed(2)+'</div></div>');
 		});
 
 		//Update Cart quantity
 		$('.itemCount').text(quantityTotal);
 
+		//Create handler for remove button click
+		$('.removeButton').on("click", function(){
+			console.log($(this).parent().find('span.productId').text());
+			SbCart.remove($(this).parent().find('span.productId').text(),1);
+		});
+
 		//Build a 'total' row
 		var total = _total();
 		$('#productDisplay .innerWrap').append('<div class="cartRow"><div class="noStretch spans7">Total: </div><div class="noStretch spans3 txtRight">$'+total+'</div></div>');
+
 		//Flash item count!
 		$('.itemCount').fadeOut(500).fadeIn(500);
+
 	};
 
 	var _quantTotal = function(){
