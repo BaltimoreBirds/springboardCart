@@ -268,6 +268,17 @@
 				callback(products);
 			}
 		},
+		emptyCart: function(){
+			var productArray = _products();
+			productArray.forEach(function(key){
+				delete products[key];
+			});
+
+			//Update the default view if we're using it
+			if(defaults.usingDefaultCart){
+				_updateCartView();
+			}
+		},
 		total: function(){
 			return _total();
 		},
