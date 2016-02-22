@@ -274,6 +274,9 @@
 				delete products[key];
 			});
 
+			//Set products onto the session
+			_setSessionProducts();
+
 			//Update the default view if we're using it
 			if(defaults.usingDefaultCart){
 				_updateCartView();
