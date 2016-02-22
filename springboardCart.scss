@@ -27,17 +27,17 @@ body {
 		display: table;
 		clear: both;
 	}
-	//lol grid
-	.cartRow .spans1{width: 10%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans2{width: 20%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans3{width: 30%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans4{width: 40%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans5{width: 50%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans6{width: 60%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans7{width: 70%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans8{width: 80%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans9{width: 90%; display: inline-block; float: left; display: relative;}
-	.cartRow .spans10{width: 100%; display: inline-block; float: left; display: relative;}
+ 	//lol grid
+	.cartRow .spans1 {width: 10%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans2 {width: 20%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans3 {width: 30%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans4 {width: 40%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans5 {width: 50%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans6 {width: 60%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans7 {width: 70%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans8 {width: 80%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans9 {width: 90%; margin: 0 !important; display: inline-block; float: left; display: relative;}
+	.cartRow .spans10{width: 100%; margin: 0 !important; display: inline-block; float: left; display: relative;}
 
 	.bar{
 		margin: 0;

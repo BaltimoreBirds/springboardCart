@@ -54,6 +54,8 @@
 		//Build a 'total' row
 		var total = _total();
 		$('#productDisplay .innerWrap').append('<div class="cartRow"><div class="noStretch spans7">Total: </div><div class="noStretch spans3 txtRight">$'+total+'</div></div>');
+		//Flash item count!
+		$('.itemCount').fadeOut(500).fadeIn(500);
 	};
 
 	var _quantTotal = function(){
