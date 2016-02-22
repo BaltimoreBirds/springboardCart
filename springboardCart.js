@@ -22,6 +22,7 @@
 			defaults = {
 				sessionName: null,
 				usingDefaultCart: false,
+				useRemoveButton: false,
 				brandName: 'Swan & Son',
 				minHeight: 30,
 				bgColor: '#d8d8d8',
@@ -46,17 +47,21 @@
 					quant = products[key].quantity;
 
 			quantityTotal += quant;
-			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="noStretch spans5">'+productName+'</div><div class="noStretch spans2"><span class="productId" style="display: none;">'+productId+'</span><img class="removeButton" src="https://artic.gospringboard.com/files/artic/xOut_crop_0.png"/> Qty. '+quant+'</div><div class="noStretch spans3 txtRight">$'+parseFloat(quant*price).toFixed(2)+'</div></div>');
+			$('#productDisplay .innerWrap').append('<div class="cartRow borderBottom"><div class="noStretch spans5">'+productName+'</div><div class="noStretch spans2"><span class="productId" style="display: none;">'+productId+'</span><span class="productQuant">Qty. '+quant+'</span></div><div class="noStretch spans3 txtRight">$'+parseFloat(quant*price).toFixed(2)+'</div></div>');
 		});
 
 		//Update Cart quantity
 		$('.itemCount').text(quantityTotal);
 
-		//Create handler for remove button click
-		$('.removeButton').on("click", function(){
-			console.log($(this).parent().find('span.productId').text());
-			SbCart.remove($(this).parent().find('span.productId').text(),1);
-		});
+		//Add and Create handler for remove button If	
+		if(defaults.useRemoveButton){
+			$('span.productQuant').before('<img class="removeButton" src="https://artic.gospringboard.com/files/artic/xOut_crop_0.png"/> ');
+
+			$('.removeButton').on("click", function(){
+				console.log($(this).parent().find('span.productId').text());
+				SbCart.remove($(this).parent().find('span.productId').text(),1);
+			});
+		}
 
 		//Build a 'total' row
 		var total = _total();
