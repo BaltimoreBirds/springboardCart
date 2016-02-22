@@ -41,7 +41,7 @@ Checkout: SbCart.checkout([callback]);
 ```	
 
 Empty the Cart:  
-User this on the thank you page after a successful transaction.
+Use this on the thank you page after a successful transaction.
 ```javascript
 	SbCart.emptyCart();
 ```	
