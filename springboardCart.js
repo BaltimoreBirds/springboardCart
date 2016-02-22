@@ -155,7 +155,7 @@
 			//Check user wants default cart, and that its not already there
 			if(defaults.usingDefaultCart && !$('#springboardCartWrap').length ){
 
-				//Affix shopping Cart bar. HTML in cart.html
+				//Affix Default Shopping Cart bar. HTML in cart.html
 				$('body').prepend('<div id="springboardCartWrap" class="affixed"><div class="bar borderBottom"><div class="cartRow"><div id="logoBlock" class="noStretch spans5"><p><img src="'+defaults.brandLogo+'"/> '+defaults.brandName+'</p></div><a class="clickable" href="#"><div id="cartDropdown" class="noStretch spans5 txtRight"><p><span class="itemCount"></span><img class="iconWidth" src="'+defaults.cartImgUrl+'"/> <span>Shopping Cart <span class="arrowIcon">&#9660;</span></span></p></div></a> </div></div><div id="productDisplay" class="cartRow"><div class="innerWrap spans4"></div></div></div>');
 
 				//Style it
