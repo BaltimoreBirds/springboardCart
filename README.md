@@ -1,7 +1,7 @@
 # Springboard Shopping Cart  
 Shopping Cart module for Springboard
 
-Include this module definition on all pages utilizing the shopping cart. Include the springboardCart.css above your custom styles, and include the springboardCart.js file above your custom scripts. They will not interfere with page existing page's css or scripts(And nothing will happen if you don't initialize it with `.shop()`, as seen below). Utilize the SbCart API methods to Initialize, Add, Remove, Checkout, etc., in your custom scripts:   
+Include this module definition on all pages utilizing the shopping cart. Include the springboardCart.css above your custom styles, and include the springboardCart.js file above your custom scripts. They will not interfere with page existing page's css or scripts(and nothing will happen if you don't initialize it with `.shop()`, as seen below). Utilize the SbCart API methods to Initialize, Add, Remove, Checkout, etc., in your custom scripts:   
 
 <small>**Arguments in brackets are [optional]*</small>
 
