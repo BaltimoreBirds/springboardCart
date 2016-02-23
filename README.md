@@ -26,17 +26,16 @@ Dev's option to use the default cart, but you'll have to set and reuse the sessi
 
 <h5>Remove Products: SbCart.remove(productId, productName, quantity [,callback]);</h5>
 ```javascript
-	SbCart.remove('aic_member_plus_161.50', 1, function(data){
-		//returns products
-		//do something with data
+	SbCart.remove('aic_member_plus_161.50', 1, function(products){
+		//do something with products()
 	});
 ```	
 
 <h5>Checkout: SbCart.checkout([callback]);</h5>
 ```javascript
-	SbCart.checkout(function(data){
+	SbCart.checkout(function(products){
 		//returns products
-		//do something with data
+		//do something with products
 	});
 ```	
 
