@@ -3,7 +3,7 @@ Shopping Cart module for Springboard
 
 Include this module definition on all pages utilizing the shopping cart. Include the springboardCart.css above your custom styles, and include the springboardCart.js file above your custom scripts. They will not interfere with page existing page's css or scripts(And nothing will happen if you don't initialize it with `.shop()`, as seen below). Utilize the SbCart API methods to Initialize, Add, Remove, Checkout, etc., in your custom scripts:   
 
-**Arguments in brackets are [optional]*
+<small>**Arguments in brackets are [optional]*</small>
 
 <h5>Initialize Cart: SbCart.shop({options});  </h5>
 Dev's option to use the default cart, but you'll have to set and reuse the sessionName on every cart initilization, aka, on every page in which you hope to use the cart.
