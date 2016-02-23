@@ -10,9 +10,9 @@ Dev's option to use the default cart, but you'll have to set and reuse the sessi
 ```javascript
 	SbCart.shop({
 		sessionName: 'testSession', //A session name is required
-		usingDefaultCart: true,
-		brandName: 'Swan & Son',
-		txtColor: '#ffffff',
+		usingDefaultCart: true, 
+		brandName: 'Swan & Son',  //I would at least set to blank unless you like my name 
+		txtColor: '#ffffff',  
 		brandLogo: 'https://artic.gospringboard.com/files/artic/swan_crop2.png',
 		bgColor: '#0A004D',
 		secondaryColor: '#d8d8d8',
