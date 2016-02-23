@@ -21,7 +21,7 @@ Dev's option to use the default cart, but you'll have to set and reuse the sessi
 
 <h5>Add Products: SbCart.add(productId, productName, quantity, price [,callback]);</h5>
 ```javascript
-	SbCart.add('aic_member_plus_161.50','Member Plus', 1, 83.68);
+	SbCart.add('aic_member_plus_161.50','Member Plus', 1, 161.50);
 ```
 
 <h5>Remove Products: SbCart.remove(productId, productName, quantity [,callback]);</h5>
