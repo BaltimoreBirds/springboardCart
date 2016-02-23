@@ -56,7 +56,7 @@ Use this on the thank you page after a successful transaction.
 	SbCart.products();
 ```	
 
-<h5>Return Quantity of items in Cart:</h5>
+<h5>Return quantity of items in Cart:</h5>
 ```javascript
 	SbCart.quantTotal();
 ```	
