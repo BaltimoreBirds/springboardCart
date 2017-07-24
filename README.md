@@ -7,6 +7,7 @@ Include this module definition on all pages utilizing the shopping cart. Include
 
 <h5>Initialize Cart: SbCart.shop({options});  </h5>
 Dev's option to use the default cart, but you'll have to set and reuse the sessionName on every cart initilization, aka, on every page in which you hope to use the shopping cart.
+
 ```javascript
 	SbCart.shop({
 		sessionName: 'testSession', //A session name is required
@@ -20,11 +21,13 @@ Dev's option to use the default cart, but you'll have to set and reuse the sessi
 ```
 
 <h5>Add Products: SbCart.add(productId, productName, quantity, price [,callback]);</h5>
+
 ```javascript
 	SbCart.add('aic_member_plus_161.50','Member Plus', 1, 161.50);
 ```
 
 <h5>Remove Products: SbCart.remove(productId, productName, quantity [,callback]);</h5>
+
 ```javascript
 	SbCart.remove('aic_member_plus_161.50', 1, function(products){
 		//do something with products()
@@ -32,6 +35,7 @@ Dev's option to use the default cart, but you'll have to set and reuse the sessi
 ```	
 
 <h5>Checkout: SbCart.checkout([callback]);</h5>
+
 ```javascript
 	SbCart.checkout(function(products){
 		//returns products
@@ -41,21 +45,25 @@ Dev's option to use the default cart, but you'll have to set and reuse the sessi
 
 <h5>Empty the Cart:  </h5>
 Use this on the thank you page after a successful transaction.
+
 ```javascript
 	SbCart.emptyCart();
 ```	
 
 <h5>Return Total:</h5>
+
 ```javascript
 	SbCart.total();
 ```	
 
 <h5>Return Products:</h5>
+
 ```javascript
 	SbCart.products();
 ```	
 
 <h5>Return quantity of items in Cart:</h5>
+
 ```javascript
 	SbCart.quantTotal();
 ```	
